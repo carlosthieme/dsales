@@ -1,0 +1,11 @@
+"id_cliente";"rut_cliente";"nombre_cliente";"apellido_cliente";"dir_cliente";"comunas_id_comuna";"fono_cliente";"correo_cliente";"fenac_cliente";"es_activo"
+57;"257264971";"Ricardo ";"Ruiz";"Santa Elena";1;"912345678";"creadorclientes@creeclientes.cl";"2021-10-28";0
+59;"243479325";"johan";"Nery";"santiago concha";17;"987346965";"JohanNery@gmail.com";"1995-10-04";1
+60;"223474793";"helen";"neyra";"malaquias";17;"964527823";"helenneyra@mail.com";"1994-07-14";1
+61;"10214564k";"VIVIANA JACQUELINE";"ALARCON";"zenteno";23;"967942567";"vivianajacke@gmail.com";"1994-07-14";1
+62;"3781561k";"ALARCON";"Cabeza";"santiaguillo 200";1;"9726354725";"alarconcabeza@gmail.com";"1994-07-14";1
+63;"121653249";"Ana";"ZAVALA";"Merced";1;"976325373";"anazava@gmail.com";"1983-11-11";1
+64;"15494012k";"soledad";"Gallejos";"Matta 99";1;"954783635";"solellejos@gmail.com";"1990-11-01";1
+65;"94025605";"EMA";"ALFARO";"los matorrales";7;"987762567";"emaalfaro@gmail.com";"1988-11-09";1
+66;"10421164K";"max";"perdio";"quewuajiro ";6;"912356789";"";"1990-11-08";1
+67;"140043893";"valerio";"Alvarez diaz";"el golf";8;"965254782";"valealva@gmail.com";"1986-06-05";1

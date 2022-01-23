@@ -1,0 +1,11 @@
+"id_proveedor";"rut_prove";"nombre_prove";"dir_prove";"comunas_id_comuna";"fono_prove";"correo_prove";"es_activo_prove"
+11;"76611050-9";"Inge Limitada";"calle 22";27;"2564207";"contacto@inge.cl";1
+12;"15349449-8";"fabrica de peras";"calle 66";4;"25252525";"contacto@chile.com";1
+13;"15948849-5";"Fruna Ltda";"camino a melipilla 777";17;"111111111";"fruna@fruna.cl";0
+14;"12120555-2";"Fabrica de gatos";"calle 12";1;"6661222";"info@gatos.cl";1
+15;"12152125-2";"Gallina Ltda";"camino 666";10;"222222222";"info@dino.cl";1
+16;"11252147-2";"Pollos asados LTDA";"camino 2020";5;"251252555";"info@dino.cl";1
+17;"75215454-5";"Fabrica peluche";"calle gato 123";9;"";"info@hotmail.com";0
+18;"15458849-5";"savory";"camino a melipilla 111111";4;"121545122";"2020@savory.cl";0
+19;"12852521-2";"fabrica dulces 1";"camino 999";20;"958552212";"info@dino.cl";1
+20;"9123456-2";"Licores XP";"calle 25";6;"252125225";"info@licores.cl";1

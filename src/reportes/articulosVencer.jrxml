@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dedb924d-613c-4b94-afb9-0e2f11bfd4ab">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select id_artic, nombre_artic, stock_artic, fecha_venc, descripcion_cat from brupyzheuopvwwseukzo.articulos inner join cat_articulos 
+on id_cat_articulo = cat_articulos_id_cat_articulo
+where fecha_venc between current_date() and current_date() +5 order by fecha_venc asc;]]>
+	</queryString>
+	<field name="id_artic" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre_artic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stock_artic" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_venc" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion_cat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="26" width="288" height="68" uuid="90c1957a-50bd-46ac-855d-79482dba60fa"/>
+				<textElement>
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Reporte Artículos]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="454" y="59" width="100" height="20" uuid="94bf1aa4-697e-4f9a-aad1-cef6ca56e717"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="26" y="11" width="114" height="100" uuid="cfa7d271-840b-45bf-a80d-4a64cc3e5d55"/>
+				<imageExpression><![CDATA["https://naterra.cl/dreamgifts/logodgbg.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="140" y="111" width="288" height="24" uuid="ba4e6fc3-844b-4bd1-bb20-708c0fde3e12"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Vencimiento en los próximos 5 días]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="74" height="20" uuid="25b569a8-8ddc-4cfc-b67e-e8dea6002354"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ID ARTICULO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="1" width="157" height="20" uuid="caf6880a-4bfb-4c74-8371-b6c9db0318c1"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NOMBRE ARTICULO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="1" width="128" height="20" uuid="128a2de0-ce7d-4f5d-b059-f196a77fa241"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[VENCIMIENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="1" width="50" height="20" uuid="e5b3888e-cfbf-46ad-ba81-009244436b98"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[STOCK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="1" width="163" height="20" uuid="def206ea-b4c3-4f7b-91d6-ddfe9f6cbede"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CATEGORIA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="74" height="20" uuid="d8e377f1-c20c-433b-ba34-966c7897f19c"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_artic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="2" width="157" height="20" uuid="adb693cf-58de-42d0-a017-f859ba72a065"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombre_artic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="2" width="128" height="20" uuid="53d616ed-8d59-41ff-8851-452182902a97"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fecha_venc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="2" width="50" height="20" uuid="5f28f4f4-53ef-41af-8283-41407c268686"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{stock_artic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="2" width="163" height="20" uuid="685a3b7f-0cf2-4aac-aa14-dd97a4fe2aac"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{descripcion_cat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="74" y="34" width="223" height="20" uuid="443d04c3-5357-48fd-8a9a-f4756703ec7b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="297" y="34" width="40" height="20" uuid="8a88188e-6bd2-447c-bbeb-04845eb9e607"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
